@@ -158,7 +158,8 @@ def worker():
 
         inswapper_enabled = args.pop()
         inswapper_source_image = args.pop()
-        inswapper_target_image_index = args.pop()        
+        inswapper_source_image_indicies = args.pop()
+        inswapper_target_image_indicies = args.pop()
 
         print(f"Inswapper: {'ENABLED' if inswapper_enabled else 'DISABLED'}")
 
@@ -834,7 +835,7 @@ def worker():
                     imgs = [inpaint_worker.current_task.post_process(x) for x in imgs]
 
                 if inswapper_enabled and input_image_checkbox:
-                    imgs = perform_face_swap(imgs, inswapper_source_image, inswapper_target_image_index)                    
+                    imgs = perform_face_swap(imgs, inswapper_source_image, inswapper_source_image_indicies, inswapper_target_image_indicies)
 
                 for x in imgs:
                     d = [

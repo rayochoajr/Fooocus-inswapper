@@ -216,7 +216,8 @@ with shared.gradio_root:
                         with gr.Row():
                             with gr.Column():
                                 inswapper_enabled = gr.Checkbox(label="Enabled", value=False)
-                                inswapper_target_image_index = gr.Number(label = "Target Image Index", info="-1 will swap all faces, otherwise provide the 0-based index of the face (0, 1, etc)")
+                                inswapper_source_image_indicies = gr.Text(label="Source Image Index", info="-1 will swap all faces, otherwise provide the 0-based index of the face (0, 1, etc)")
+                                inswapper_target_image_indicies = gr.Text(label = "Target Image Index", info="-1 will swap all faces, otherwise provide the 0-based index of the face (0, 1, etc)")
                             with gr.Column():
                                 inswapper_source_image = grh.Image(label='Source Face Image', source='upload', type='numpy')
                     with gr.TabItem(label="PhotoMaker") as photomaker_tab:
@@ -599,7 +600,7 @@ with shared.gradio_root:
         ctrls += [uov_method, uov_input_image]
         ctrls += [outpaint_selections, inpaint_input_image, inpaint_additional_prompt, inpaint_mask_image]
         ctrls += ip_ctrls
-        ctrls += [inswapper_enabled, inswapper_source_image, inswapper_target_image_index]
+        ctrls += [inswapper_enabled, inswapper_source_image, inswapper_source_image_indicies, inswapper_target_image_indicies]
         ctrls += [photomaker_enabled, photomaker_images]
         ctrls += [instantid_enabled, instantid_source_image_path, instantid_pose_image_path, instantid_identitynet_strength_ratio, instantid_adapter_strength_ratio]
 
