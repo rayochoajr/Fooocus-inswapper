@@ -216,8 +216,8 @@ with shared.gradio_root:
                         with gr.Row():
                             with gr.Column():
                                 inswapper_enabled = gr.Checkbox(label="Enabled", value=False)
-                                inswapper_source_image_indicies = gr.Text(label="Source Image Index", info="-1 will swap all faces, otherwise provide the 0-based index of the face (0, 1, etc)")
-                                inswapper_target_image_indicies = gr.Text(label = "Target Image Index", info="-1 will swap all faces, otherwise provide the 0-based index of the face (0, 1, etc)")
+                                inswapper_source_image_indicies = gr.Text(label="Source Image Index", info="-1 will swap all faces, otherwise provide the 0-based index of the face (0, 1, etc)", value="0")
+                                inswapper_target_image_indicies = gr.Text(label = "Target Image Index", info="-1 will swap all faces, otherwise provide the 0-based index of the face (0, 1, etc)", value="0")
                             with gr.Column():
                                 inswapper_source_image = grh.Image(label='Source Face Image', source='upload', type='numpy')
                     with gr.TabItem(label="PhotoMaker") as photomaker_tab:

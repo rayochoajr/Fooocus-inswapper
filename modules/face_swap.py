@@ -49,4 +49,3 @@ def perform_face_swap(images, inswapper_source_image, inswapper_source_image_ind
       swapped_images.append(result_image)
   
   return swapped_images
-
