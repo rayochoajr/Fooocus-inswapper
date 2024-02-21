@@ -23,9 +23,9 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 
 # Copy directories
 echo "Copying basicsr"
-cp -r inswapper/CodeFormer/CodeFormer/basicsr venv/lib/site-packages/
+cp -r inswapper/CodeFormer/CodeFormer/basicsr venv/lib/python*/site-packages/
 echo "Copying facelib"
-cp -r inswapper/CodeFormer/CodeFormer/facelib venv/lib/site-packages/
+cp -r inswapper/CodeFormer/CodeFormer/facelib venv/lib/python*/site-packages/
 
 # Create a directory for checkpoints
 mkdir -p inswapper/checkpoints
